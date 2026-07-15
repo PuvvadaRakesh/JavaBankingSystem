@@ -110,18 +110,22 @@ public class Account {
         this.active = active;
     }
 
-    public void deposit(double amount){                                 //deposit method to add money to the account
+    public void addTransaction(Transaction transaction) {
+        this.transactionHistory.add(transaction);
+    }
+
+    public void deposit(double amount, String description){                                 //deposit method to add money to the account
         if(amount <= 0){ 
             System.out.println("Invalid deposit amount");
             return;
         }
         this.balance += amount;
-        Transaction transaction = new Transaction("Deposit", amount, balance, "Cash Deposit");
+        Transaction transaction = new Transaction("Deposit", amount, balance, description);
         this.transactionHistory.add(transaction);
         System.out.println("₹" + amount + " deposited successfully.");
     }
 
-    public void withdraw(double amount) {                                 //withdraw method to withdraw money from the account
+    public void withdraw(double amount, String description) {                                 //withdraw method to withdraw money from the account
 
     if (amount <= 0) {
         System.out.println("Invalid withdrawal amount.");
@@ -136,9 +140,7 @@ public class Account {
     balance -= amount;
 
     transactionHistory.add(
-        new Transaction("Withdraw", amount, balance, "Cash Withdrawal")
-    );
-
+        new Transaction("Withdraw", amount, balance, description));
     System.out.println("₹" + amount + " withdrawn successfully.");
     }
     

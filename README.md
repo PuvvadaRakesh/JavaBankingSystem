@@ -1,19 +1,21 @@
-# Java Banking System
+# Java Bank Management System
 
-A console-based banking system developed in Java.
-
-## Planned Features
+## Features
 
 - Create Account
 - Deposit Money
 - Withdraw Money
-- Check Balance
+- Transfer Money
+- Login Authentication
 - Change PIN
-- Delete Account
+- Update Profile
+- Account Deactivation
+- Transaction History
+- Bank Statistics
 
 ## Technologies
 
 - Java
-- VS Code
-- Git
-- GitHub
+- Object-Oriented Programming
+- Collections (ArrayList)
+- Java Time API
